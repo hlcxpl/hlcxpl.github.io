@@ -4,29 +4,22 @@ body {
   font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
+section img{
+  border-radius: 5pX;
+}
+.imgProfile{
+  width: 10vw;
+  height: 10vh;
+}
+.imgProfile img{
+  width: 100%;
+}
+/* Carousel styling */
 #introCarousel,
 .carousel-inner,
 .carousel-item,
 .carousel-item.active {
   height: 100vh;
-}
-
-.carousel-item:nth-child(1) {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-.carousel-item:nth-child(2) {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-.carousel-item:nth-child(3) {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
 }
 
 /* Height for devices larger than 576px */
@@ -39,6 +32,8 @@ body {
 .navbar .nav-link {
   color: #fff !important;
 }
+
+
 
 /* Mis trabajos */
 
