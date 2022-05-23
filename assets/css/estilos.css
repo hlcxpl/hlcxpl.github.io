@@ -29,9 +29,6 @@ section img{
   }
 }
 
-.navbar .nav-link {
-  color: #fff !important;
-}
 
 
 
@@ -66,4 +63,8 @@ section img{
     display: none;
   }
 
+  .carouselVideoExample
+  {
+    display:none;
+  }
 }
