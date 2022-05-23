@@ -4,6 +4,8 @@ body {
   font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
+
+
 .lista-1 {
   list-style: none;
 }
@@ -17,7 +19,7 @@ body {
   list-style: none;
 }
 
-.maks {
+.mask {
   background: linear-gradient(45deg,
       rgba(29, 236, 197, 0.5),
       rgba(91, 14, 214, 0.5) 100%);
