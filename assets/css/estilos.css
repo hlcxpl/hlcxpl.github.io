@@ -3,82 +3,94 @@
 body {
   font-family: 'Barlow Semi Condensed', sans-serif;
 }
-.lista-1{
-  list-style:none;
+
+.lista-1 {
+  list-style: none;
 }
-.lista-1 li{
- display: inline-block;
- padding: 1rem;
+
+.lista-1 li {
+  display: inline-block;
+  padding: 1rem;
 }
-.lista-2{
-  list-style:none;
+
+.lista-2 {
+  list-style: none;
 }
-/* .lista-1 li{
+
+.maks {
+  background: linear-gradient(45deg,
+      rgba(29, 236, 197, 0.5),
+      rgba(91, 14, 214, 0.5) 100%);
+  }
+
+  /* .lista-1 li{
  display: inline-block;
  padding: 1rem;
 } */
 
-section img{
-  border-radius: 5pX;
-}
-.imgProfile{
-  width: 10vw;
-  height: 10vh;
-}
-.imgProfile img{
-  width: 100%;
-}
-/* Carousel styling */
-#introCarousel,
-.carousel-inner,
-.carousel-item,
-.carousel-item.active {
-  height: 100vh;
-}
-
-/* Height for devices larger than 576px */
-@media (min-width: 992px) {
-  #introCarousel {
-    margin-top: -58.59px;
+  section img {
+    border-radius: 5pX;
   }
-}
 
-
-
-
-/* Mis trabajos */
-
-#Mis-trabajos .image-top {
-  height: 250px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-/* Contacto */
-
-#Contacto form label {
-  font-weight: 700;
-  color: #373a3c;
-}
-
-@media (min-width: 768px) {
-  #logo2 {
-    display: none;
+  .imgProfile {
+    width: 10vw;
+    height: 10vh;
   }
-}
 
-@media (max-width: 768px) {
+  .imgProfile img {
+    width: 100%;
+  }
+
+  /* Carousel styling */
+  #introCarousel,
+  .carousel-inner,
+  .carousel-item,
+  .carousel-item.active {
+    height: 100vh;
+  }
+
+  /* Height for devices larger than 576px */
+  @media (min-width: 992px) {
+    #introCarousel {
+      margin-top: -58.59px;
+    }
+  }
+
+
+
+
+  /* Mis trabajos */
+
+  #Mis-trabajos .image-top {
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Contacto */
+
   #Contacto form label {
-    font-weight: 400;
+    font-weight: 700;
+    color: #373a3c;
   }
 
-  #logo1 {
-    display: none;
+  @media (min-width: 768px) {
+    #logo2 {
+      display: none;
+    }
   }
 
-  .carousel
-  {
-    display:none;
+  @media (max-width: 768px) {
+    #Contacto form label {
+      font-weight: 400;
+    }
+
+    #logo1 {
+      display: none;
+    }
+
+    .carousel {
+      display:none;
+    }
   }
-}
