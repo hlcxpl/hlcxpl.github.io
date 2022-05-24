@@ -2,6 +2,8 @@
 
 body {
   font-family: 'Barlow Semi Condensed', sans-serif;
+  max-width:100vw;
+  width: 100%;
 }
 
 
@@ -99,3 +101,4 @@ body {
   .copy{
     background-color: rgba(0, 0, 0, 0.05);
   }
+  
