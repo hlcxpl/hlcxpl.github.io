@@ -21,22 +21,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
         integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     <script src="sweetalert2.min.js"></script>
     <link rel="stylesheet" href="sweetalert2.min.css">
-    <link rel="stylesheet" href="assets/css/estilos.css">
     <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <link rel="stylesheet" href="dark-mode.css" id="dark-mode-css" disabled>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-+2D0NnRtvOrC3StmY3XPx72nD5tRpdA/PT5v3jiVCIWfAHH6FFiu2JSVpF8Ck9Ft" crossorigin="anonymous">
+   
     <title>Portafolio Luis Sanchez</title>
 </head>
 
 <body>
     <!--================= NAV =============================-->
-    <nav class="navbar navbar-expand-lg .bg-transparent fixed-top">
+    <nav class="navbar navbar-expand-lg bg-transparent fixed-top ">
         <div class="container">
             <!--================= LOGO =============================-->
             <a class="navbar-brand" href="#">
-                <img id="logo1" src="assets/img/logo (2).png" class="img-fluid w-25">
-                <img id="logo2" src="assets/img/propuesta2.png" class="img-fluid w-25">
+                <img alt="logo1" id="logo1" src="assets/img/logo (2).png" class="img-fluid w-25">
+                <img alt="logo2" id="logo2" src="assets/img/propuesta2.png" class="img-fluid w-25">
             </a>
             <!--===============TOGGLE BUTTON========================-->
             <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
@@ -64,11 +68,11 @@
                         </a>
                     </li>
                     <div class="dropdown">
-                        <a class="dropdown-toggle d-flex align-items-center hidden-arrow pt-1 ps-3" href="#"
+                        <a class="dropdown-toggle d-flex align-items-center hidden-arrow pt-1 ps-3 mt-1" href="#"
                             id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown"
                             aria-expanded="false">
-                            <img src="./assets/img/Profile.jpg" class="rounded-circle" style="overflow: hidden;" width="40" height="50"
-                                alt="Black and White Portrait of a Man" loading="lazy"/>
+                            <img alt="profilepic" src="./assets/img/Profile.jpg" class="rounded-circle imgProfile"
+                                width="60" height="60" alt="Black and White Portrait of a Man" loading="lazy" />
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
                             <li>
@@ -78,6 +82,12 @@
                             </li>
                         </ul>
                     </div>
+                    <li class="nav-item ml-5 px-2 pt-1 mb-3">
+                        <button id="dark-mode-toggle" class="btn btn-dark">
+                            <i class="fas fa-moon moon-icon fa-xs"></i>
+                            <i class="fas fa-sun sun-icon"></i>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -88,7 +98,7 @@
     <header class="text-dark text-start  ">
 
         <!--===================incio carrousel===============================-->
-        <div id="carouselVideoExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
+        <div id="carouselVideoExample" class="carousel slide carousel-fade container-fluid" data-mdb-ride="carousel">
 
             <!-- Indicators -->
             <div class="carousel-indicators">
@@ -151,134 +161,140 @@
     <!--===================fin header===============================-->
 
     <!--===================Acerca Mi===============================-->
-    <div class="container-fluid bg-black bg-gradient">
-        <section id="Acerca-de-mi" class="container text-center py-5 ">
-            <!--===================TITULO===============================-->
-            <h2 class="display-3 fw-bold my-4">Acerca de Mi</h2>
-            <!--===================TARJETA HORIZONTAL===============================-->
-            <div class="row g-0 bg-dark position-relative rounded-4">
-                <div class="col-md-4 mb-md-0 p-md-4">
-                    <div class="bg-image hover-overlay ripple accordion" data-mdb-ripple-color="light">
-                        <img src="./assets/img/Profile.jpg" class="w-100" alt="profile-pic" class="img-fluid" />
-                        <div class="mask"></div>
-                    </div>
-                </div>
 
-                <div class="col-md-8 p-5 ps-md-0 ">     
-                    <h5 class="mt-0 p-3">Luis Omar Sanchez Diaz</h5>
-                    <hr>
-                    <p>
-                        Soy Ingeniro en computación engresado de la unviersidad Dr Rafael Belloso
-                        Chacin,
-                        Maracaibo Edo-Zulia en el año 2017.
-                    </p>
-                    <p>
-                        Desarrolador Fullstack JavaScript e Ingeniero en Computación 5 años de experiencia laboral en el sector privado estando a cargo de desempeñar los cargos de Desarrollador Frotend en el desarrollo Web, modelando bases de datos y realizando maqueteo de tecnologías.
-                        Durante mi trayectoria profesional me destacado por mi capacidad de liderazgo asumiendo proyectos y grupos de trabajos y mi responsabilidad frente a las labores y tareas que se han delegado.
-                        Actualmente me encuentro en la búsqueda de nuevos desafíos profesionales que me permitan seguir creciendo en el área TI de Desarrollo.
-                    </p>
+    <section id="Acerca-de-mi" class="container-fluid p-5 text-center bg-black bg-gradient dark-mode-toggleable">
+        <!--===================TITULO===============================-->
+        <h2 class="display-3 fw-bold my-4">Acerca de Mi</h2>
+        <!--===================TARJETA HORIZONTAL===============================-->
+        <div class="row container-xxl g-0 bg-dark position-relative rounded-4  shadow-4-strong  dark-mode-toggleable">
+            <div class="col-md-4 mb-md-0 p-md-4">
+                <div class="bg-image hover-overlay ripple accordion" data-mdb-ripple-color="light">
+                    <img src="./assets/img/Profile.jpg" class="w-100" alt="profile-pic" class="img-fluid" />
+                    <div class="mask"></div>
                 </div>
             </div>
-            <!--===================Aptitudes===============================-->
-            <div class="row">
-                <h2 class="display-3 fw-bold my-4">Aptitudes</h2>
-                <div class="col-12 col-md-4" class="accordion" id="accordion1">
-                    <div class="accordion-item">
-                        <button class="accordion-button" type="button" data-mdb-toggle="collapse"
-                            data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            <i class="fa-brands fa-connectdevelop fa-3x my-3"></i>
-                            <h3 class="my-3 fw-bold p-3 d-flex justify-content-center">Developer</h3>
-                        </button>
-                        <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne"
-                            data-mdb-parent="#accordion1">
-                            <div class="accordion-body">
-                                <p class="my-3">
-                                    Mi carrera como Desarrollador Comienza con pequeños proyectos de la universidad
-                                    adquiriendo
-                                    experienza con los años resolviendo problemas y tomando apoyo de algunos de los
-                                    mentores que
-                                    te
-                                    regala la vida
-                                </p>
-                                <ul class="lista-1">
-                                    <h5>Lenguajes, librerias, FramesWorks y gestores de Bases de Datos</h5>
-                                    <li>html <i class="fa-brands fa-html5 fa-2x"></i></li>
-                                    <li>css <i class="fa-brands fa-css3-alt fa-2x"></i></li>
-                                    <li>JavaScript <i class="fa-brands fa-js fa-2x"></i></li>
-                                    <li>React <i class="fa-brands fa-react fa-2x"></i></li>
-                                    <li>Node.js <i class="fa-brands fa-node-js fa-2x"></i></li>
-                                    <li>Java <i class="fa-brands fa-java fa-2x"></i></li>
-                                    <li>MySQL <i class="fa-solid fa-database fa-2x"></i></li>
-                                    <li>GitHub <i class="fa-brands fa-github fa-2x"></i></li>
-                                    <li>WordPress <i class="fa-brands fa-wordpress fa-2x"></i></li>
-                                    <li>Elementor <i class="fa-brands fa-elementor fa-2x"></i></li>
-                                    <li>Sass <i class="fa-brands fa-sass fa-2x"></i></li>
-                                    <li>Python <i class="fa-brands fa-python fa-2x"></i></li>
-                                    <li>Postgres <i class="fa-brands fa-database fa-2x"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4" class="accordion" id="accordion2">
-                    <div class="accordion-item">
-                        <button class="accordion-button" type="button" data-mdb-toggle="collapse"
-                            data-mdb-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                            <i class="fa-solid fa-microchip fa-3x my-3"></i>
-                            <h3 class="my-3 fw-bold p-3">Electrónica</h3>
-                        </button>
-                        <div id="collapseTwo" class="accordion-collapse collapse " aria-labelledby="headingOne"
-                            data-mdb-parent="#accordion2">
-                            <div class="accordion-body">
-                                <p class="my-3">
-                                    En area de la eletrónica digital en un ambiente academico he obtenido experiencia
-                                    con
-                                    los
-                                    intrumento
-                                    de medición y software de simulación, creacion de circuitos integrados y robotica
-                                </p>
-                                <ul class="lista-2">
-                                    <h5 class="p-2">Lenguajes, Softwares y Herramientas</h5>
-                                    <li>Matlab software Simulador de Microchips y circuitos</li>
-                                    <li>C++ como lenguanje de programacion Para PICs</li>
-                                    <h5 class="p-2">Herramientas</h5>
-                                    <li>Osciloscopio</li>
-                                    <li>Multimetro</li>
-                                    <li>Fuente de Poder</li>
-                                    <li>Cautin</li>
-                                    <li>Programadores de chips</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4" class="accordion" id="accordion3">
-                    <div class="accordion-item">
-                        <button class="accordion-button" type="button" data-mdb-toggle="collapse"
-                            data-mdb-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                            <img class="w-25" src="/assets/img/cisco.png" alt="">
-                            <h3 class="my-3 fw-bold p-3">Redes</h3>
-                        </button>
-                        <div id="collapseThree" class="accordion-collapse collapse " aria-labelledby="headingThree"
-                            data-mdb-parent="#accordion3">
-                            <div class="accordion-body">
-                                <p class="my-3">
-                                    Para el Estudio topologico de las redes obtuve mis conocimientos con en cusos ccna
-                                    CISCO
-                                </p>
-                            </div>
+
+            <div class="col-md-8 p-5 ps-md-0 ">
+                <h5 class="mt-0 p-3">Luis Omar Sanchez Diaz</h5>
+                <hr>
+                <p>
+                    Soy Ingeniro en computación engresado de la unviersidad Dr Rafael Belloso
+                    Chacin,
+                    Maracaibo Edo-Zulia en el año 2017.
+                </p>
+                <p>
+                    Desarrolador Fullstack JavaScript e Ingeniero en Computación 5 años de experiencia laboral en el
+                    sector privado estando a cargo de desempeñar los cargos de Desarrollador Frotend en el
+                    desarrollo Web, modelando bases de datos y realizando maqueteo de tecnologías.
+                    Durante mi trayectoria profesional me destacado por mi capacidad de liderazgo asumiendo
+                    proyectos y grupos de trabajos y mi responsabilidad frente a las labores y tareas que se han
+                    delegado.
+                    Actualmente me encuentro en la búsqueda de nuevos desafíos profesionales que me permitan seguir
+                    creciendo en el área TI de Desarrollo.
+                </p>
+            </div>
+        </div>
+        <!--===================Aptitudes===============================-->
+        <div class="row">
+            <h2 class="display-3 fw-bold my-4 mb-3">Aptitudes</h2>
+            <div class="col-12 col-md-4  " class="accordion" id="accordion1">
+                <div class="accordion-item">
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
+                        data-mdb-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <i class="fa-brands fa-connectdevelop fa-3x my-3"></i>
+                        <h3 class="my-3 fw-bold p-3 d-flex justify-content-center">Developer</h3>
+                    </button>
+                    <div id="collapseOne" class="accordion-collapse collapse  dark-mode-toggleable "
+                        aria-labelledby="headingOne" data-mdb-parent="#accordion1">
+                        <div class="accordion-body">
+                            <p class="my-3">
+                                Mi carrera como Desarrollador Comienza con pequeños proyectos de la universidad
+                                adquiriendo
+                                experienza con los años resolviendo problemas y tomando apoyo de algunos de los
+                                mentores que
+                                te
+                                regala la vida
+                            </p>
+                            <ul class="lista-1">
+                                <h5>Lenguajes, librerias, FramesWorks y gestores de Bases de Datos</h5>
+                                <li>html <i class="fa-brands fa-html5 fa-2x"></i></li>
+                                <li>css <i class="fa-brands fa-css3-alt fa-2x"></i></li>
+                                <li>JavaScript <i class="fa-brands fa-js fa-2x"></i></li>
+                                <li>React <i class="fa-brands fa-react fa-2x"></i></li>
+                                <li>Node.js <i class="fa-brands fa-node-js fa-2x"></i></li>
+                                <li>Java <i class="fa-brands fa-java fa-2x"></i></li>
+                                <li>MySQL <i class="fa-solid fa-database fa-2x"></i></li>
+                                <li>GitHub <i class="fa-brands fa-github fa-2x"></i></li>
+                                <li>WordPress <i class="fa-brands fa-wordpress fa-2x"></i></li>
+                                <li>Elementor <i class="fa-brands fa-elementor fa-2x"></i></li>
+                                <li>Sass <i class="fa-brands fa-sass fa-2x"></i></li>
+                                <li>Python <i class="fa-brands fa-python fa-2x"></i></li>
+                                <li>Postgres <i class="fa-solid fa-database fa-2x"></i></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
+            <div class="col-12 col-md-4 mb-3" class="accordion" id="accordion2">
+                <div class="accordion-item">
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
+                        data-mdb-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        <i class="fa-solid fa-microchip fa-3x my-3"></i>
+                        <h3 class="my-3 fw-bold p-3">Electrónica</h3>
+                    </button>
+                    <div id="collapseTwo" class="accordion-collapse collapse dark-mode-toggleable"
+                        aria-labelledby="headingOne" data-mdb-parent="#accordion2">
+                        <div class="accordion-body">
+                            <p class="my-3">
+                                En area de la eletrónica digital en un ambiente academico he obtenido experiencia
+                                con
+                                los
+                                intrumento
+                                de medición y software de simulación, creacion de circuitos integrados y robotica
+                            </p>
+                            <ul class="lista-2">
+                                <h5 class="p-2">Lenguajes, Softwares y Herramientas</h5>
+                                <li>Matlab software Simulador de Microchips y circuitos</li>
+                                <li>C++ como lenguanje de programacion Para PICs</li>
+                                <h5 class="p-2">Herramientas</h5>
+                                <li>Osciloscopio</li>
+                                <li>Multimetro</li>
+                                <li>Fuente de Poder</li>
+                                <li>Cautin</li>
+                                <li>Programadores de chips</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-3" class="accordion" id="accordion3">
+                <div class="accordion-item">
+                    <button class="accordion-button" type="button" data-mdb-toggle="collapse"
+                        data-mdb-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                        <img class="w-25" src="/assets/img/cisco.png" alt="">
+                        <h3 class="my-3 fw-bold p-3">Redes</h3>
+                    </button>
+                    <div id="collapseThree" class="accordion-collapse collapse dark-mode-toggleable "
+                        aria-labelledby="headingThree" data-mdb-parent="#accordion3">
+                        <div class="accordion-body">
+                            <p class="my-3">
+                                Para el Estudio topologico de las redes obtuve mis conocimientos con en cusos ccna
+                                CISCO
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!--===================DESARROLLO RECIENTES===============================-->
-    <section id="Mis-trabajos" class="bg-light text-dark py-5">
+    <section id="Mis-trabajos"
+        class=" justify-content-center justify-content-lg-between bg-light text-dark py-5 dark-mode-toggleable ">
         <h2 class="display-4 fw-bold text-center  mb-3">DESAROLLOS RECIENTES</h2>
 
         <div class="row">
-            <div class="col-12 col-sm-4 py-2 text-light">
+            <div class="col-12 col-sm-4 py-2 text-light mb-4">
                 <div class="card text-center bg-dark bg-gradient">
                     <div class="card-header">
                         <h4>E-COMMERCE</h4>
@@ -298,7 +314,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-4 py-2 text-light">
+            <div class="col-12 col-sm-4 py-2 text-light mb-4">
                 <div class="card text-center bg-dark bg-gradient">
                     <div class="card-header">
                         <h4>JUEGOS</h4>
@@ -318,7 +334,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-4 py-2 text-light">
+            <div class="col-12 col-sm-4 py-2 text-light mb-4">
                 <div class="card text-center bg-dark bg-gradient">
                     <div class="card-header">
                         <h4>IGUANAS</h4>
@@ -327,7 +343,7 @@
                     <div class="card-body">
                         <h5 class="card-title fw-bold">Iguana</h5>
                         <p class="card-text">
-                           
+
                         </p>
                         <a
                             href="https://hlcxpl.github.io/latamDesafio/Desafio%20Latam/Desafio%203%20Posicionamiento/index.html">
@@ -338,7 +354,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-4 py-2">
+            <div class="col-12 col-sm-4 py-2 mb-4">
                 <div class="card text-center text-light bg-dark bg-gradient">
                     <div class="card-header">
                         <h4>CUPPON</h4>
@@ -347,7 +363,7 @@
                     <div class="card-body">
                         <h5 class="card-title fw-bold">Cupon</h5>
                         <p class="card-text">
-                           
+
                         </p>
                         <a
                             href="https://hlcxpl.github.io/latamDesafio/Desafio%20Latam/Desafio%204%20Boostrap/index.html">
@@ -358,7 +374,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-4 py-2">
+            <div class="col-12 col-sm-4 mb-4 py-2">
                 <div class="card text-center text-light bg-dark bg-gradient">
                     <div class="card-header">
                         <h4>SPA</h4>
@@ -367,10 +383,10 @@
                     <div class="card-body">
                         <h5 class="card-title fw-bold">SPA</h5>
                         <p class="card-text">
-                           
+
                         </p>
                         <a href="https://hlcxpl.github.io/fdsw-github/">
-                            <button type="button" class="btn btn-outline-danger">
+                            <button type="button" class="btn btn-outline-danger text-center border-1 border-danger">
                                 Ver más
                             </button>
                         </a>
@@ -380,7 +396,7 @@
         </div>
     </section>
 
-    <section id="Contacto" class="container-fluid bg-black bg-gradient">
+    <section id="Contacto" class="container-fluid bg-black bg-gradient dark-mode-toggleable">
         <div class="container-sm p-5 mt-0">
             <h2 class="display-4 fw-bold text-center my-4">Contáctame</h2>
 
@@ -413,12 +429,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="text-center text-lg-start bg-light bg-gradient text-muted">
+    <footer class="text-center text-lg-start bg-light bg-gradient text-muted ">
         <!-- Section: Social media -->
-        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom ">
             <!-- Left -->
             <div class="me-5 d-none d-lg-block">
-                <span>Mantente conectado con nuestras redes:</span>
+                <span>Conecta conmigo en mis redes:</span>
             </div>
             <!-- Left -->
 
@@ -496,7 +512,7 @@
                         <h6 class="text-uppercase fw-bold mb-4">
                             Contact
                         </h6>
-                        <p><i class="fas fa-home me-3"></i> BioBio, Concepción, Chile</p>
+                        <p><i class="fas fa-home me-3"></i> Santiago de Chile, Chile</p>
                         <p>
                             <i class="fas fa-envelope me-3"></i>
                             hlcxpl@gmail.com
@@ -505,6 +521,11 @@
                         <i class="fa-brands fa-discord me-3"></i> hlcxpl#1281</p>
                     </div>
                     <!-- Grid column -->
+                    <div class="badge-base LI-profile-badge text-center badgelink" data-locale="es_ES" data-size="large"
+                        data-theme="dark" data-type="HORIZONTAL" data-vanity="luisomarsanchezdiaz" data-version="v1"><a
+                            class="badge-base__link LI-simple-link"
+                            href="https://cl.linkedin.com/in/luisomarsanchezdiaz?trk=profile-badge"></a></div>
+
                 </div>
                 <!-- Grid row -->
             </div>
@@ -523,6 +544,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"
         integrity="sha512-7HDUKBIUa1tykYCUINFix0eJNScy99DDTEVb+Hy6V82NtrnOaMYK0nf2HA2NFRXLv9CL5BnlXdu9rFvK9cms6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="/assets/js/darkmode.js"></script>
 
 </body>
 

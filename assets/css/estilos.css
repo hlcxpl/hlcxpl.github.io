@@ -2,10 +2,27 @@
 
 body {
   font-family: 'Barlow Semi Condensed', sans-serif;
-  max-width:100vw;
+  max-width: 100vw;
   width: 100%;
 }
 
+.badgelink {
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  margin-bottom: 20px;
+}
+
+/* Custom CSS to change navbar text color */
+.custom-navbar {
+  color: black !important;
+}
 
 
 .lista-1 {
@@ -25,80 +42,161 @@ body {
   background: linear-gradient(45deg,
       rgba(29, 236, 197, 0.5),
       rgba(91, 14, 214, 0.5) 100%);
-  }
+}
 
-  /* .lista-1 li{
+/* .lista-1 li{
  display: inline-block;
  padding: 1rem;
 } */
 
-  section img {
-    border-radius: 5pX;
+section img {
+  border-radius: 5pX;
+}
+
+.imgProfile {
+  width: 2.7rem;
+  /* Ajusta el tamaño del contenedor según tus necesidades */
+  height: 2.7rem;
+  /* Ajusta el tamaño del contenedor según tus necesidades */
+  border-radius: 50%;
+  /* Hace que el contenedor sea redondeado (círculo) */
+  overflow: hidden;
+  /* Oculta cualquier contenido que se desborde del contenedor */
+  position: relative;
+  margin-right: 5rem;
+}
+
+.imgProfile img {
+  width: 100%;
+  /* Ajusta el ancho de la imagen al 100% del contenedor */
+  height: 100%;
+  /* Ajusta la altura de la imagen al 100% del contenedor */
+  object-fit: cover;
+  /* Escala y corta la imagen para llenar completamente el contenedor */
+  position: absolute;
+  /* Permite posicionar la imagen dentro del contenedor */
+  top: 0;
+  left: 0;
+  transform: scale(1.2);
+
+}
+
+/* Carousel styling */
+#introCarousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item.active {
+  height: 100vh;
+}
+
+/* Height for devices larger than 576px */
+@media (min-width: 992px) {
+  #introCarousel {
+    margin-top: -58.59px;
   }
+}
 
-  .imgProfile {
-    width: 10vw;
-    height: 10vh;
+
+
+
+/* Mis trabajos */
+
+#Mis-trabajos .image-top {
+  height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Contacto */
+
+#Contacto form label {
+  font-weight: 700;
+  color: #373a3c;
+}
+
+@media (min-width: 768px) {
+  #logo2 {
+    display: none;
   }
+}
 
-  .imgProfile img {
-    width: 100%;
-  }
-
-  /* Carousel styling */
-  #introCarousel,
-  .carousel-inner,
-  .carousel-item,
-  .carousel-item.active {
-    height: 100vh;
-  }
-
-  /* Height for devices larger than 576px */
-  @media (min-width: 992px) {
-    #introCarousel {
-      margin-top: -58.59px;
-    }
-  }
-
-
-
-
-  /* Mis trabajos */
-
-  #Mis-trabajos .image-top {
-    height: 250px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  /* Contacto */
-
+@media (max-width: 768px) {
   #Contacto form label {
-    font-weight: 700;
-    color: #373a3c;
+    font-weight: 400;
   }
 
-  @media (min-width: 768px) {
-    #logo2 {
-      display: none;
-    }
+  #logo1 {
+    display: none;
   }
 
-  @media (max-width: 768px) {
-    #Contacto form label {
-      font-weight: 400;
-    }
-
-    #logo1 {
-      display: none;
-    }
-
-    .carousel {
-      display:none;
-    }
+  .carousel {
+    display: none;
   }
-  .copy{
-    background-color: rgba(0, 0, 0, 0.05);
-  }
-  
+}
+
+.copy {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* styles.css */
+
+
+.btn {
+
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 20px;
+  width: 50px;
+  /* Ancho igual a la altura para hacerlo redondo */
+  height: 50px;
+  /* Altura igual al ancho para hacerlo redondo */
+  border-radius: 50%;
+  /* Radio de borde del 50% para hacerlo redondo */
+  padding: 0;
+  margin-left: 5px;
+}
+
+.btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.btn:hover {
+  background: none;
+  /* Fondo transparente en estado de "hover" */
+}
+.btn:active {
+  background: none;
+}
+
+.moon-icon,
+.sun-icon {
+  background: none !important;
+  /* Fondo transparente */
+  fill: none !important;
+  /* Relleno transparente */
+  stroke: white !important;
+  /* Color del trazo en blanco para la luna */
+  cursor: pointer;
+  /* Cambiar el cursor al estilo de mano al pasar el mouse */
+  size: 1rem;
+}
+
+.moon-icon:hover,
+.sun-icon:hover {
+  background: none !important;
+  /* Fondo transparente en estado de "hover" */
+}
+
+.moon-icon {
+  display: inline-block;
+}
+
+
+.dark-mode-toggleable {
+  transition: background-color 0.3s, color 0.3s;
+}

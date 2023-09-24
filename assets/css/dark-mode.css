@@ -1,0 +1,28 @@
+/* dark-mode.css */
+
+body {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+}
+
+/* Add specific dark mode styles for elements as needed */
+.navbar {
+    background-color: #222; /* Dark navbar background color */
+    color: #fff; /* Light navbar text color */
+}
+
+/* Add more styles for other elements as needed */
+/* Establecer el fondo oscuro para todas las secciones */
+.container-fluid.bg-black,
+.navbar.bg-dark {
+    background-color: #222 !important; /* Cambia el fondo a oscuro */
+}
+
+/* Cambiar el color del texto en las secciones */
+.container-fluid.bg-black,
+.navbar.bg-dark,
+.card.text-light {
+    color: #fff !important; /* Cambia el color del texto a blanco */
+}
+
+/* Agrega más reglas CSS según sea necesario para otros elementos */
