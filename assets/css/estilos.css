@@ -54,9 +54,9 @@ section img {
 }
 
 .imgProfile {
-  width: 2rem;
+  width: 0.5rem;
   /* Ajusta el tamaño del contenedor según tus necesidades */
-  height: 2rem;
+  height: 0.5rem;
   /* Ajusta el tamaño del contenedor según tus necesidades */
   border-radius: 50%;
   /* Hace que el contenedor sea redondeado (círculo) */
