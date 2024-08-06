@@ -167,6 +167,7 @@ section img {
   background: none;
   /* Fondo transparente en estado de "hover" */
 }
+
 .btn:active {
   background: none;
 }
@@ -197,4 +198,32 @@ section img {
 
 .dark-mode-toggleable {
   transition: background-color 0.3s, color 0.3s;
+}
+
+/* Efecto de vidrio opaco para la barra de navegación */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.3);
+  /* Fondo blanco semitransparente */
+  backdrop-filter: blur(10px);
+  /* Aplicar desenfoque */
+  -webkit-backdrop-filter: blur(10px);
+  /* Para soporte en Safari */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Sombra sutil */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  /* Borde inferior */
+}
+
+/* Efecto para el modo oscuro */
+.dark-mode .navbar {
+  background-color: rgba(34, 34, 34, 0.8);
+  /* Fondo oscuro semitransparente */
+  backdrop-filter: blur(10px);
+  /* Aplicar desenfoque */
+  -webkit-backdrop-filter: blur(10px);
+  /* Para soporte en Safari */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  /* Sombra sutil */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  /* Borde inferior */
 }
